@@ -990,7 +990,7 @@ const PKGS = [
   { id:'shared',  name:'Shared Room', price:1480, mediaId:13883389,
     blurb:'A bed in a shared room of 2–3. Hostel-warm, full surf programme.',
     incl:['7 nights, shared villa room','5 guided surf sessions','Board + wetsuit rental','Breakfast + 4 dinners','Airport transfer'] },
-  { id:'private', name:'Private Room', price:1980, mediaId:30119097,
+  { id:'private', name:'Private Room', price:1980, photo: 'https://www.pexels.com/photo/white-bed-linen-near-black-framed-window-6606354/'},
     blurb:'Your own room with a window to the sea. The popular one.',
     incl:['7 nights, private room + bath','5 guided surf sessions','Board + wetsuit rental','Breakfast + 4 dinners','Airport transfer','Sunset yoga, twice'] },
   { id:'casa',    name:'Casa Drifter', price:3240, mediaId:7660809,
@@ -1025,8 +1025,7 @@ const Packages = ({ pkg, setPkg }) => (
               transform: on ? 'translateY(-4px)' : 'none'}}>
             <div className="ph" style={{aspectRatio:'5/3',width:'100%',
               flex:'0 0 auto',position:'relative'}}>
-              <PxImg id={p.mediaId} w={1000} alt={p.name}/>
-            </div>
+<img src={p.photo} style={{width:'100%',height:'100%',objectFit:'cover'}} />            </div>
             <div style={{padding:'28px',display:'flex',flexDirection:'column',
               gap:22,flex:1}}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start'}}>
